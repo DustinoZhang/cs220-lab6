@@ -9,6 +9,6 @@ branches:
 jobs:
   include:
     - stage: build
-      script: make -C /hello/ clean all
+      script: make -C hello/ clean all
     - stage: test
       script: ./hello
