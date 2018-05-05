@@ -6,10 +6,6 @@ branches:
   only:
     - master
 
-jobs:
-  build:
-    - script: make -C hello/ clean all
-    - deploy: 
-        skip_cleanup: true
-  test:
-    - script: hello/hello
+script:
+  - make -C hello/ clean all
+  - hello/hello
