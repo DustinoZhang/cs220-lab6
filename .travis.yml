@@ -1,0 +1,14 @@
+language: c
+
+install: true
+
+branches:
+  only:
+    - master
+
+jobs:
+  include:
+    - stage: build
+      script: make -C /hello/ clean all
+    - stage: test
+      script: ./hello
